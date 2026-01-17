@@ -30,6 +30,34 @@ body.light-theme {
   --extra: #D9D9D9;
 }
 
+body.light-theme h1,
+body.light-theme h2 {
+  color: #0B0B0B;
+  text-shadow: none;
+}
+
+body.light-theme .footer {
+  background: #F0F1F4;
+}
+
+body.light-theme .footer-section h3 {
+  color: #111111;
+}
+
+body.light-theme .footer-section p,
+body.light-theme .footer-section ul li,
+body.light-theme .footer-section ul li a,
+body.light-theme .footer-bottom {
+  color: #2F2F2F;
+}
+
+body.light-theme .footer-section ul li a:hover {
+  padding-left: 0;
+  transform: none;
+  text-shadow: none;
+  color: var(--secondary);
+}
+
 /* ===== RESET & BASE STYLES ===== */
 * {
   margin: 0;
@@ -912,6 +940,7 @@ p {
   margin-bottom: 1.5rem;
   font-size: 1.3rem;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .footer-section:hover h3 {
@@ -922,10 +951,12 @@ p {
 
 .footer-section ul {
   list-style: none;
+  text-align: center;
 }
 
 .footer-section ul li {
   margin-bottom: 0.8rem;
+  text-align: center;
 }
 
 .footer-section ul li a {
@@ -933,6 +964,7 @@ p {
   text-decoration: none;
   transition: all 0.3s ease;
   font-family: var(--font-body);
+  text-align: center;
 }
 
 .footer-section ul li a:hover {
@@ -952,6 +984,7 @@ p {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  justify-content: center;
 }
 
 .footer-social a {
@@ -1210,6 +1243,10 @@ img:hover {
     padding: 1.5rem;
     overflow: visible;
     max-height: none;
+  }
+
+  .stat-icon {
+    margin: 0 auto 1rem;
   }
 }
 
