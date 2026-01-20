@@ -34,6 +34,7 @@
         .sidebar-header {
             padding: 2rem 1.5rem 1.5rem;
             border-bottom: 1px solid var(--extra);
+            text-align: center;
         }
 
         .sidebar-logo {
@@ -41,6 +42,7 @@
             text-align: center;
             display: flex;
             justify-content: center;
+            width: 100%;
         }
 
         .sidebar-logo .logo {
@@ -277,16 +279,31 @@
             letter-spacing: 1px;
         }
 
+        .recent-bookings-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
         .booking-row {
             display: flex;
             justify-content: space-between;
             gap: 1.5rem;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--extra);
+            padding: 1rem 1.2rem;
+            background: var(--primary);
+            border: 1px solid var(--extra);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
-        .booking-row:last-child {
-            border-bottom: none;
+        .booking-row:hover {
+            border-color: var(--secondary);
+            box-shadow: 0 10px 20px rgba(220, 20, 60, 0.15);
+            transform: translateY(-2px);
         }
 
         .booking-details h4 {
@@ -310,6 +327,16 @@
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        .booking-status.confirm {
+            background: rgba(241, 196, 15, 0.2);
+            color: #b8860b;
+        }
+
+        .booking-status.closed {
+            background: rgba(46, 204, 113, 0.2);
+            color: #1e8449;
         }
 
         .status-list {
@@ -501,8 +528,10 @@
             }
 
             .admin-card-header {
+                flex-direction: column;
                 justify-content: center;
                 text-align: center;
+                align-items: center;
             }
 
             .booking-row {
@@ -512,6 +541,20 @@
 
             .booking-details {
                 text-align: center;
+                width: 100%;
+            }
+
+            .admin-card-header a {
+                margin-top: 0.4rem;
+            }
+
+            .booking-row {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .booking-status {
+                align-self: center;
             }
 
             .status-item {
@@ -614,31 +657,32 @@
                 <div class="admin-card admin-card-wide">
                     <div class="admin-card-header">
                         <h2>Recent Bookings</h2>
-                        <a href="car-details.html">View all</a>
                     </div>
-                    <div class="booking-row">
+                    <div class="recent-bookings-list">
+                        <div class="booking-row">
                         <div class="booking-details">
                             <h4>Mercedes-Benz E-Class</h4>
                             <p>Pickup: Jan 15, 2025 • Downtown</p>
                             <p>Customer: John Doe</p>
                         </div>
-                        <div class="booking-status">Active</div>
-                    </div>
-                    <div class="booking-row">
+                        
+                        </div>
+                        <div class="booking-row">
                         <div class="booking-details">
                             <h4>BMW M4 Coupe</h4>
                             <p>Pickup: Jan 14, 2025 • Airport</p>
                             <p>Customer: Alicia Keys</p>
                         </div>
-                        <div class="booking-status">Confirm</div>
-                    </div>
-                    <div class="booking-row">
+                        
+                        </div>
+                        <div class="booking-row">
                         <div class="booking-details">
                             <h4>Range Rover Sport</h4>
                             <p>Return: Jan 13, 2025 • Train Station</p>
                             <p>Customer: David Smith</p>
                         </div>
-                        <div class="booking-status">Closed</div>
+                        
+                        </div>
                     </div>
                 </div>
 
