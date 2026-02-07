@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
     <style>
         body {
             padding-top: 0;
@@ -589,6 +591,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="admin-layout" id="adminLayout">
         <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
@@ -616,144 +619,145 @@
         <main class="admin-main">
             <div class="admin-content">
                 <header class="admin-topbar">
-                <div class="topbar-title">
-                   
-                </div>
-                <div class="topbar-actions">
-                    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
+                    <div class="topbar-title">
+                        <h1>Overview</h1>
+                        <p>Welcome back, Admin</p>
+                    </div>
+                    <div class="topbar-actions">
+                        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
                 </header>
 
                 <section class="admin-stats">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
-                    <div class="stat-value">26</div>
-                    <div class="stat-label">Active Bookings</div>
-                    <p>5 pickups scheduled today</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-car"></i></div>
-                    <div class="stat-value">48</div>
-                    <div class="stat-label">Vehicles Available</div>
-                    <p>92% fleet readiness</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-users"></i></div>
-                    <div class="stat-value">312</div>
-                    <div class="stat-label">Active Customers</div>
-                    <p>+18 new this week</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
-                    <div class="stat-value">3</div>
-                    <div class="stat-label">Overdue Returns</div>
-                    <p>Follow up required</p>
-                </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                        <div class="stat-value">26</div>
+                        <div class="stat-label">Active Bookings</div>
+                        <p>5 pickups scheduled today</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-car"></i></div>
+                        <div class="stat-value">48</div>
+                        <div class="stat-label">Vehicles Available</div>
+                        <p>92% fleet readiness</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-value">312</div>
+                        <div class="stat-label">Active Customers</div>
+                        <p>+18 new this week</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">Overdue Returns</div>
+                        <p>Follow up required</p>
+                    </div>
                 </section>
 
                 <section class="admin-grid">
-                <div class="admin-card admin-card-wide">
-                    <div class="admin-card-header">
-                        <h2>Recent Bookings</h2>
-                    </div>
-                    <div class="recent-bookings-list">
-                        <div class="booking-row">
-                        <div class="booking-details">
-                            <h4>Mercedes-Benz E-Class</h4>
-                            <p>Pickup: Jan 15, 2025 • Downtown</p>
-                            <p>Customer: John Doe</p>
+                    <div class="admin-card admin-card-wide">
+                        <div class="admin-card-header">
+                            <h2>Recent Bookings</h2>
                         </div>
-                        
-                        </div>
-                        <div class="booking-row">
-                        <div class="booking-details">
-                            <h4>BMW M4 Coupe</h4>
-                            <p>Pickup: Jan 14, 2025 • Airport</p>
-                            <p>Customer: Alicia Keys</p>
-                        </div>
-                        
-                        </div>
-                        <div class="booking-row">
-                        <div class="booking-details">
-                            <h4>Range Rover Sport</h4>
-                            <p>Return: Jan 13, 2025 • Train Station</p>
-                            <p>Customer: David Smith</p>
-                        </div>
-                        
-                        </div>
-                    </div>
-                </div>
+                        <div class="recent-bookings-list">
+                            <div class="booking-row">
+                                <div class="booking-details">
+                                    <h4>Mercedes-Benz E-Class</h4>
+                                    <p>Pickup: Jan 15, 2025 • Downtown</p>
+                                    <p>Customer: John Doe</p>
+                                </div>
 
-                <div class="admin-card">
-                    <div class="admin-card-header">
-                        <h2>System Status</h2>
-                    </div>
-                    <div class="status-list">
-                        <div class="status-item">
-                            <span class="status-dot online"></span>
-                            <div>
-                                <h4>Payments</h4>
-                                <p>All systems operational</p>
                             </div>
-                        </div>
-                        <div class="status-item">
-                            <span class="status-dot warn"></span>
-                            <div>
-                                <h4>Vehicle Tracking</h4>
-                                <p>2 devices need sync</p>
+                            <div class="booking-row">
+                                <div class="booking-details">
+                                    <h4>BMW M4 Coupe</h4>
+                                    <p>Pickup: Jan 14, 2025 • Airport</p>
+                                    <p>Customer: Alicia Keys</p>
+                                </div>
+
                             </div>
-                        </div>
-                        <div class="status-item">
-                            <span class="status-dot online"></span>
-                            <div>
-                                <h4>Support Queue</h4>
-                                <p>7 open tickets</p>
-                            </div>
-                        </div>
-                        <div class="status-item">
-                            <span class="status-dot offline"></span>
-                            <div>
-                                <h4>Overdue Alerts</h4>
-                                <p>3 customers to reach</p>
+                            <div class="booking-row">
+                                <div class="booking-details">
+                                    <h4>Range Rover Sport</h4>
+                                    <p>Return: Jan 13, 2025 • Train Station</p>
+                                    <p>Customer: David Smith</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                </div>
+
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h2>System Status</h2>
+                        </div>
+                        <div class="status-list">
+                            <div class="status-item">
+                                <span class="status-dot online"></span>
+                                <div>
+                                    <h4>Payments</h4>
+                                    <p>All systems operational</p>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-dot warn"></span>
+                                <div>
+                                    <h4>Vehicle Tracking</h4>
+                                    <p>2 devices need sync</p>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-dot online"></span>
+                                <div>
+                                    <h4>Support Queue</h4>
+                                    <p>7 open tickets</p>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-dot offline"></span>
+                                <div>
+                                    <h4>Overdue Alerts</h4>
+                                    <p>3 customers to reach</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="admin-grid">
-                <div class="admin-card">
-                    <div class="admin-card-header">
-                        <h2>Fleet Snapshot</h2>
-                    </div>
-                    <div class="mini-stats">
-                        <div>
-                            <span>Available</span>
-                            <strong>48</strong>
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h2>Fleet Snapshot</h2>
                         </div>
-                        <div>
-                            <span>In Service</span>
-                            <strong>16</strong>
+                        <div class="mini-stats">
+                            <div>
+                                <span>Available</span>
+                                <strong>48</strong>
+                            </div>
+                            <div>
+                                <span>In Service</span>
+                                <strong>16</strong>
+                            </div>
+                            <div>
+                                <span>Maintenance</span>
+                                <strong>4</strong>
+                            </div>
                         </div>
-                        <div>
-                            <span>Maintenance</span>
-                            <strong>4</strong>
+                        <a class="btn btn-secondary" href="fleet.html">Review Fleet</a>
+                    </div>
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h2>Team Tasks</h2>
                         </div>
+                        <ul class="task-list">
+                            <li><span>Review late returns</span><span class="task-tag">Urgent</span></li>
+                            <li><span>Approve VIP booking requests</span><span class="task-tag info">Today</span></li>
+                            <li><span>Send maintenance follow-ups</span><span class="task-tag success">Done</span></li>
+                        </ul>
                     </div>
-                    <a class="btn btn-secondary" href="fleet.html">Review Fleet</a>
-                </div>
-                <div class="admin-card">
-                    <div class="admin-card-header">
-                        <h2>Team Tasks</h2>
-                    </div>
-                    <ul class="task-list">
-                        <li><span>Review late returns</span><span class="task-tag">Urgent</span></li>
-                        <li><span>Approve VIP booking requests</span><span class="task-tag info">Today</span></li>
-                        <li><span>Send maintenance follow-ups</span><span class="task-tag success">Done</span></li>
-                    </ul>
-                </div>
                 </section>
             </div>
         </main>
@@ -780,5 +784,5 @@
     </script>
     <script src="js/main.js"></script>
 </body>
-</html>
 
+</html>

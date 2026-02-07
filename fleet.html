@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Fleet - VELOCITY BLACK</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
     <style>
         .page-header {
             background: linear-gradient(135deg, rgba(13, 13, 13, 0.9) 0%, rgba(220, 20, 60, 0.7) 100%), url('https://images.unsplash.com/photo-1492144534655-ae79c2c03457?w=1920&h=600&fit=crop') center/cover;
@@ -14,7 +16,7 @@
             text-align: center;
             margin-top: 70px;
         }
-        
+
         .fleet-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -25,7 +27,7 @@
             width: 100%;
             box-sizing: border-box;
         }
-        
+
         /* Filter Sidebar */
         .filter-sidebar {
             width: 300px;
@@ -41,15 +43,15 @@
             flex-shrink: 0;
             z-index: 100;
         }
-        
+
         .filter-section {
             margin-bottom: 2rem;
         }
-        
+
         .filter-section:last-child {
             margin-bottom: 0;
         }
-        
+
         .filter-section h3 {
             font-family: var(--font-heading);
             color: var(--secondary);
@@ -59,13 +61,13 @@
             letter-spacing: 1px;
             text-align: left;
         }
-        
+
         .filter-options {
             display: flex;
             flex-direction: column;
             gap: 0.8rem;
         }
-        
+
         .filter-option {
             display: flex;
             align-items: center;
@@ -73,11 +75,11 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .filter-option:hover {
             color: var(--secondary);
         }
-        
+
         .filter-option input[type="checkbox"] {
             width: 18px;
             height: 18px;
@@ -85,7 +87,7 @@
             accent-color: var(--secondary);
             flex-shrink: 0;
         }
-        
+
         .filter-option label {
             cursor: pointer;
             font-family: var(--font-body);
@@ -95,12 +97,12 @@
             flex: 1;
             text-align: left;
         }
-        
+
         /* Price Range Slider */
         .price-slider-container {
             margin-top: 0.5rem;
         }
-        
+
         .price-slider {
             width: 100%;
             height: 6px;
@@ -110,7 +112,7 @@
             -webkit-appearance: none;
             appearance: none;
         }
-        
+
         .price-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
@@ -121,12 +123,12 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .price-slider::-webkit-slider-thumb:hover {
             background: var(--highlight);
             transform: scale(1.2);
         }
-        
+
         .price-slider::-moz-range-thumb {
             width: 18px;
             height: 18px;
@@ -136,12 +138,12 @@
             border: none;
             transition: all 0.3s ease;
         }
-        
+
         .price-slider::-moz-range-thumb:hover {
             background: var(--highlight);
             transform: scale(1.2);
         }
-        
+
         .price-output {
             color: var(--secondary);
             font-weight: 600;
@@ -149,7 +151,7 @@
             text-align: left;
             font-size: 1rem;
         }
-        
+
         /* Apply Filters Button */
         .apply-filters-btn {
             width: 100%;
@@ -168,20 +170,20 @@
             clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
             box-shadow: 0 5px 20px rgba(220, 20, 60, 0.3);
         }
-        
+
         .apply-filters-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 30px rgba(220, 20, 60, 0.5);
             background: linear-gradient(135deg, var(--highlight) 0%, var(--secondary) 100%);
         }
-        
+
         /* Cars Grid */
         .cars-grid-container {
             flex: 1;
             width: 100%;
             min-width: 0;
         }
-        
+
         .cars-header {
             display: flex;
             justify-content: space-between;
@@ -190,23 +192,23 @@
             flex-wrap: wrap;
             gap: 1rem;
         }
-        
+
         .cars-header h2 {
             margin: 0;
             text-align: left;
         }
-        
+
         .cars-count {
             color: var(--accent);
             font-size: 1rem;
         }
-        
+
         .cars-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
         }
-        
+
         /* Filter Toggle Button for Mobile/Tablet */
         .filter-toggle {
             display: none;
@@ -226,16 +228,16 @@
             position: relative;
             z-index: 10;
         }
-        
+
         .filter-toggle i {
             font-size: 1.1rem;
         }
-        
+
         .filter-toggle:hover {
             background: var(--highlight);
             transform: translateY(-2px);
         }
-        
+
         /* Close Button for Filter Sidebar */
         .filter-close-btn {
             display: none;
@@ -255,12 +257,12 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .filter-close-btn:hover {
             background: var(--highlight);
             transform: rotate(90deg) scale(1.1);
         }
-        
+
         .filter-overlay {
             display: none;
             position: fixed;
@@ -274,20 +276,20 @@
             transition: opacity 0.3s ease;
             pointer-events: none;
         }
-        
+
         .filter-overlay.active {
             display: block;
             opacity: 1;
             pointer-events: all;
         }
-        
+
         /* Mobile/Tablet Styles */
         @media (max-width: 1024px) {
             .fleet-container {
                 flex-direction: column;
                 padding: 2rem 1rem;
             }
-            
+
             .filter-sidebar {
                 position: fixed;
                 top: 70px;
@@ -303,25 +305,25 @@
                 overflow-y: auto;
                 padding-top: 3.5rem;
             }
-            
+
             .filter-sidebar.active {
                 left: 0;
             }
-            
+
             .filter-toggle {
                 display: flex !important;
                 position: relative;
                 z-index: 10;
             }
-            
+
             .filter-close-btn {
                 display: flex !important;
             }
-            
+
             .cars-grid-container {
                 width: 100%;
             }
-            
+
             .cars-header {
                 flex-direction: row;
                 justify-content: space-between;
@@ -330,11 +332,11 @@
                 position: relative;
                 z-index: 1;
             }
-            
+
             .cars-header h2 {
                 width: auto;
             }
-            
+
             .filter-toggle {
                 position: relative;
                 z-index: 10;
@@ -342,36 +344,36 @@
                 -webkit-tap-highlight-color: rgba(220, 20, 60, 0.3);
             }
         }
-        
+
         @media (max-width: 768px) {
             .fleet-container {
                 padding: 1.5rem 1rem;
             }
-            
+
             .filter-sidebar {
                 width: 100%;
                 max-width: 100%;
                 left: -100%;
             }
-            
+
             .filter-sidebar.active {
                 left: 0;
             }
-            
+
             .cars-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .page-header {
                 padding: 120px 1.5rem 60px;
             }
-            
+
             .cars-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1rem;
             }
-            
+
             .filter-toggle {
                 width: 100%;
                 justify-content: center;
@@ -380,10 +382,11 @@
                 pointer-events: auto;
             }
         }
-        
+
         /* Scrollbar styling removed for static sidebar */
     </style>
 </head>
+
 <body>
     <!-- NAVBAR -->
     <nav class="navbar">
@@ -404,7 +407,8 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-icons">
-                <a href="dashboard.html" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.9rem;">Dashboard</a>
+                <a href="dashboard.html" class="btn btn-secondary"
+                    style="padding: 10px 20px; font-size: 0.9rem;">Dashboard</a>
                 <a href="login.html" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.9rem;">Login</a>
                 <a href="register.html" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Register</a>
             </div>
@@ -423,14 +427,14 @@
         <div class="fleet-container">
             <!-- Filter Overlay for Mobile/Tablet -->
             <div class="filter-overlay" id="filterOverlay"></div>
-            
+
             <!-- Filter Sidebar -->
             <aside class="filter-sidebar" id="filterSidebar">
                 <!-- Close Button for Mobile/Tablet -->
                 <button class="filter-close-btn" id="filterCloseBtn" aria-label="Close Filters">
                     <i class="fas fa-times"></i>
                 </button>
-                
+
                 <!-- Car Type -->
                 <div class="filter-section">
                     <h3>Car Type</h3>
@@ -573,12 +577,14 @@
                         <span>Filters</span>
                     </button>
                 </div>
-                
+
                 <div class="cars-grid" id="carsGrid">
                     <!-- Car cards will be dynamically loaded here -->
-                    <div class="car-card" data-type="economy" data-price="39" data-transmission="manual" data-fuel="petrol" data-seats="5" data-features="gps,bluetooth">
+                    <div class="car-card" data-type="economy" data-price="39" data-transmission="manual"
+                        data-fuel="petrol" data-seats="5" data-features="gps,bluetooth">
                         <div class="car-card-image">
-                            <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&h=600&fit=crop" alt="Economy Car">
+                            <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&h=600&fit=crop"
+                                alt="Economy Car">
                         </div>
                         <div class="car-card-content">
                             <h3 class="car-card-title">Honda Civic</h3>
@@ -595,10 +601,12 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="car-card" data-type="compact" data-price="45" data-transmission="automatic" data-fuel="hybrid" data-seats="5" data-features="gps,bluetooth,camera">
+
+                    <div class="car-card" data-type="compact" data-price="45" data-transmission="automatic"
+                        data-fuel="hybrid" data-seats="5" data-features="gps,bluetooth,camera">
                         <div class="car-card-image">
-                            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=600&fit=crop" alt="Compact Car">
+                            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=600&fit=crop"
+                                alt="Compact Car">
                         </div>
                         <div class="car-card-content">
                             <h3 class="car-card-title">Toyota Corolla</h3>
@@ -615,10 +623,12 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="car-card" data-type="sedan" data-price="79" data-transmission="automatic" data-fuel="petrol" data-seats="5" data-features="gps,bluetooth,camera,sunroof">
+
+                    <div class="car-card" data-type="sedan" data-price="79" data-transmission="automatic"
+                        data-fuel="petrol" data-seats="5" data-features="gps,bluetooth,camera,sunroof">
                         <div class="car-card-image">
-                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop" alt="Sedan">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop"
+                                alt="Sedan">
                         </div>
                         <div class="car-card-content">
                             <h3 class="car-card-title">Audi A6</h3>
@@ -635,10 +645,12 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="car-card" data-type="luxury" data-price="89" data-transmission="automatic" data-fuel="petrol" data-seats="5" data-features="gps,bluetooth,camera,sunroof">
+
+                    <div class="car-card" data-type="luxury" data-price="89" data-transmission="automatic"
+                        data-fuel="petrol" data-seats="5" data-features="gps,bluetooth,camera,sunroof">
                         <div class="car-card-image">
-                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=600&fit=crop" alt="Luxury Sedan">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=600&fit=crop"
+                                alt="Luxury Sedan">
                         </div>
                         <div class="car-card-content">
                             <h3 class="car-card-title">Mercedes-Benz E-Class</h3>
@@ -655,10 +667,12 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="car-card" data-type="suv" data-price="109" data-transmission="automatic" data-fuel="diesel" data-seats="7" data-features="gps,bluetooth,camera,sunroof">
+
+                    <div class="car-card" data-type="suv" data-price="109" data-transmission="automatic"
+                        data-fuel="diesel" data-seats="7" data-features="gps,bluetooth,camera,sunroof">
                         <div class="car-card-image">
-                            <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop" alt="SUV">
+                            <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop"
+                                alt="SUV">
                         </div>
                         <div class="car-card-content">
                             <h3 class="car-card-title">Range Rover Sport</h3>
@@ -675,10 +689,12 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="car-card" data-type="sports" data-price="129" data-transmission="automatic" data-fuel="petrol" data-seats="4" data-features="gps,bluetooth,camera,sunroof">
+
+                    <div class="car-card" data-type="sports" data-price="129" data-transmission="automatic"
+                        data-fuel="petrol" data-seats="4" data-features="gps,bluetooth,camera,sunroof">
                         <div class="car-card-image">
-                            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop" alt="Sports Car">
+                            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop"
+                                alt="Sports Car">
                         </div>
                         <div class="car-card-content">
                             <h3 class="car-card-title">BMW M4 Coupe</h3>
@@ -695,10 +711,12 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="car-card" data-type="electric" data-price="99" data-transmission="automatic" data-fuel="electric" data-seats="5" data-features="gps,bluetooth,camera">
+
+                    <div class="car-card" data-type="electric" data-price="99" data-transmission="automatic"
+                        data-fuel="electric" data-seats="5" data-features="gps,bluetooth,camera">
                         <div class="car-card-image">
-                            <img src="https://cdn.motor1.com/images/mgl/rK4wRO/s1/2024-tesla-model-3-highland.jpg" alt="Electric">
+                            <img src="https://cdn.motor1.com/images/mgl/rK4wRO/s1/2024-tesla-model-3-highland.jpg"
+                                alt="Electric">
                         </div>
                         <div class="car-card-content">
                             <h3 class="car-card-title">Tesla Model 3</h3>
@@ -715,10 +733,12 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="car-card" data-type="luxury" data-price="149" data-transmission="automatic" data-fuel="petrol" data-seats="5" data-features="gps,bluetooth,camera,sunroof">
+
+                    <div class="car-card" data-type="luxury" data-price="149" data-transmission="automatic"
+                        data-fuel="petrol" data-seats="5" data-features="gps,bluetooth,camera,sunroof">
                         <div class="car-card-image">
-                            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop" alt="Luxury SUV">
+                            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop"
+                                alt="Luxury SUV">
                         </div>
                         <div class="car-card-content">
                             <h3 class="car-card-title">Porsche Cayenne</h3>
@@ -744,8 +764,9 @@
     <footer class="footer carbon-fiber">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>VELOCITY BLACK</h3>
-                <p>Premium car rental service for your every journey. Experience luxury, reliability, and exceptional service.</p>
+                <a href="index.html" class="logo">VELOCITY BLACK</a>
+                <p>Premium car rental service for your every journey. Experience luxury, reliability, and exceptional
+                    service.</p>
                 <div class="footer-social">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -786,7 +807,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 VELOCITY BLACK. All rights reserved. | <a href="#" style="color: var(--accent);">Privacy Policy</a> | <a href="#" style="color: var(--accent);">Terms of Service</a></p>
+            <p>&copy; 2025 VELOCITY BLACK. All rights reserved. | <a href="#" style="color: var(--accent);">Privacy
+                    Policy</a> | <a href="#" style="color: var(--accent);">Terms of Service</a></p>
         </div>
     </footer>
 
@@ -798,12 +820,12 @@
     <script src="js/main.js"></script>
     <script>
         // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Filter Toggle for Mobile/Tablet
             const filterToggle = document.getElementById('filterToggle');
             const filterSidebar = document.getElementById('filterSidebar');
             const filterOverlay = document.getElementById('filterOverlay');
-            
+
             // Ensure filter toggle is visible on mobile/tablet
             function updateFilterToggleVisibility() {
                 if (window.innerWidth <= 1024 && filterToggle) {
@@ -812,19 +834,19 @@
                     filterToggle.style.display = 'none';
                 }
             }
-            
+
             // Initial check
             updateFilterToggleVisibility();
-            
+
             // Update on resize
             let resizeTimer;
-            window.addEventListener('resize', function() {
+            window.addEventListener('resize', function () {
                 clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(function() {
+                resizeTimer = setTimeout(function () {
                     updateFilterToggleVisibility();
                 }, 250);
             });
-            
+
             // Function to open filter sidebar
             function openFilterSidebar() {
                 if (filterSidebar) {
@@ -835,7 +857,7 @@
                 }
                 document.body.style.overflow = 'hidden';
             }
-            
+
             // Function to close filter sidebar
             function closeFilterSidebar() {
                 if (filterSidebar) {
@@ -846,25 +868,25 @@
                 }
                 document.body.style.overflow = '';
             }
-            
+
             // Toggle filter sidebar on button click
             if (filterToggle && filterSidebar) {
-                filterToggle.addEventListener('click', function(e) {
+                filterToggle.addEventListener('click', function (e) {
                     e.preventDefault();
                     e.stopPropagation();
-                    
+
                     if (filterSidebar.classList.contains('active')) {
                         closeFilterSidebar();
                     } else {
                         openFilterSidebar();
                     }
                 });
-                
+
                 // Also add touch event for mobile devices
-                filterToggle.addEventListener('touchend', function(e) {
+                filterToggle.addEventListener('touchend', function (e) {
                     e.preventDefault();
                     e.stopPropagation();
-                    
+
                     if (filterSidebar.classList.contains('active')) {
                         closeFilterSidebar();
                     } else {
@@ -872,75 +894,75 @@
                     }
                 });
             }
-            
+
             // Close filter sidebar when clicking overlay
             if (filterOverlay) {
-                filterOverlay.addEventListener('click', function(e) {
+                filterOverlay.addEventListener('click', function (e) {
                     e.preventDefault();
                     e.stopPropagation();
                     closeFilterSidebar();
                 });
             }
-            
+
             // Close button inside sidebar
             const filterCloseBtn = document.getElementById('filterCloseBtn');
             if (filterCloseBtn) {
-                filterCloseBtn.addEventListener('click', function(e) {
+                filterCloseBtn.addEventListener('click', function (e) {
                     e.preventDefault();
                     e.stopPropagation();
                     closeFilterSidebar();
                 });
             }
-            
+
             // Close filter sidebar when clicking outside on mobile/tablet
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (window.innerWidth <= 1024) {
                     if (filterSidebar && filterSidebar.classList.contains('active')) {
                         // Check if click is outside sidebar and overlay
-                        if (!filterSidebar.contains(e.target) && 
-                            !filterOverlay.contains(e.target) && 
+                        if (!filterSidebar.contains(e.target) &&
+                            !filterOverlay.contains(e.target) &&
                             !filterToggle.contains(e.target)) {
                             closeFilterSidebar();
                         }
                     }
                 }
             });
-            
+
             // Prevent sidebar from closing when clicking inside it
             if (filterSidebar) {
-                filterSidebar.addEventListener('click', function(e) {
+                filterSidebar.addEventListener('click', function (e) {
                     e.stopPropagation();
                 });
             }
-            
+
             // Price Range Slider
             const priceSlider = document.getElementById('priceSlider');
             const priceOutput = document.getElementById('priceOutput');
-            
+
             if (priceSlider && priceOutput) {
-                priceSlider.addEventListener('input', function() {
+                priceSlider.addEventListener('input', function () {
                     priceOutput.textContent = '$' + this.value + '/day';
                 });
             }
-            
+
             // Filter Functionality
             const applyFiltersBtn = document.getElementById('applyFilters');
             const carsGrid = document.getElementById('carsGrid');
             const carsCount = document.getElementById('carsCount');
             const allCarCards = document.querySelectorAll('.car-card');
-            
+
             function filterCars() {
                 if (!priceSlider) return;
-                
+
                 const selectedTypes = Array.from(document.querySelectorAll('input[name="car-type"]:checked')).map(cb => cb.value);
                 const selectedTransmissions = Array.from(document.querySelectorAll('input[name="transmission"]:checked')).map(cb => cb.value);
                 const selectedFuels = Array.from(document.querySelectorAll('input[name="fuel-type"]:checked')).map(cb => cb.value);
                 const selectedSeats = Array.from(document.querySelectorAll('input[name="seats"]:checked')).map(cb => cb.value);
                 const selectedFeatures = Array.from(document.querySelectorAll('input[name="features"]:checked')).map(cb => cb.value);
                 const maxPrice = parseInt(priceSlider.value) || 200;
-                
+
                 let visibleCount = 0;
-                
+
                 allCarCards.forEach(card => {
                     const cardType = card.dataset.type;
                     const cardPrice = parseInt(card.dataset.price) || 0;
@@ -948,34 +970,34 @@
                     const cardFuel = card.dataset.fuel;
                     const cardSeats = card.dataset.seats;
                     const cardFeatures = card.dataset.features ? card.dataset.features.split(',') : [];
-                    
+
                     let show = true;
-                    
+
                     // Check car type
                     if (selectedTypes.length > 0 && !selectedTypes.includes(cardType)) {
                         show = false;
                     }
-                    
+
                     // Check price
                     if (cardPrice > maxPrice) {
                         show = false;
                     }
-                    
+
                     // Check transmission
                     if (selectedTransmissions.length > 0 && !selectedTransmissions.includes(cardTransmission)) {
                         show = false;
                     }
-                    
+
                     // Check fuel type
                     if (selectedFuels.length > 0 && !selectedFuels.includes(cardFuel)) {
                         show = false;
                     }
-                    
+
                     // Check seats
                     if (selectedSeats.length > 0 && !selectedSeats.includes(cardSeats)) {
                         show = false;
                     }
-                    
+
                     // Check features
                     if (selectedFeatures.length > 0) {
                         const hasAllFeatures = selectedFeatures.every(feature => cardFeatures.includes(feature));
@@ -983,7 +1005,7 @@
                             show = false;
                         }
                     }
-                    
+
                     if (show) {
                         card.style.display = '';
                         visibleCount++;
@@ -991,11 +1013,11 @@
                         card.style.display = 'none';
                     }
                 });
-                
+
                 if (carsCount) {
                     carsCount.textContent = `Showing ${visibleCount} car${visibleCount !== 1 ? 's' : ''}`;
                 }
-                
+
                 // Close filter sidebar on mobile/tablet after applying
                 if (window.innerWidth <= 1024 && filterSidebar && filterOverlay) {
                     filterSidebar.classList.remove('active');
@@ -1003,11 +1025,11 @@
                     document.body.style.overflow = '';
                 }
             }
-            
+
             if (applyFiltersBtn) {
                 applyFiltersBtn.addEventListener('click', filterCars);
             }
-            
+
             // Update count on page load
             if (carsCount && allCarCards.length > 0) {
                 carsCount.textContent = `Showing ${allCarCards.length} cars`;
@@ -1015,4 +1037,5 @@
         });
     </script>
 </body>
+
 </html>

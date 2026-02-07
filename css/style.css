@@ -1193,7 +1193,7 @@ img:hover {
   .hero {
     overflow-y: auto;
     align-items: flex-start;
-    padding-top: 2rem;
+    padding-top: 8rem;
   }
 
   .hero-content {

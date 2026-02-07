@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Locations - VELOCITY BLACK</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
     <style>
         .page-header {
             background: linear-gradient(135deg, rgba(13, 13, 13, 0.9) 0%, rgba(220, 20, 60, 0.7) 100%), url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1920&h=600&fit=crop') center/cover;
@@ -14,10 +16,12 @@
             text-align: center;
             margin-top: 70px;
         }
+
         .location-search {
             max-width: 600px;
             margin: 2rem auto;
         }
+
         .location-search input {
             width: 100%;
             padding: 15px;
@@ -26,6 +30,7 @@
             color: var(--text);
             font-size: 1.1rem;
         }
+
         .map-container {
             width: 100%;
             height: 500px;
@@ -37,6 +42,7 @@
             justify-content: center;
             color: var(--accent);
         }
+
         .location-card {
             background: var(--subtle);
             padding: 2rem;
@@ -44,28 +50,33 @@
             margin-bottom: 2rem;
             transition: all 0.3s ease;
         }
+
         .location-card:hover {
             transform: translateX(10px);
             box-shadow: 0 5px 20px rgba(220, 20, 60, 0.3);
         }
+
         .location-header {
             display: flex;
             justify-content: space-between;
             align-items: start;
             margin-bottom: 1rem;
         }
+
         .location-info {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin-top: 1rem;
         }
+
         .location-info-item {
             display: flex;
             align-items: center;
             gap: 0.5rem;
             color: var(--accent);
         }
+
         .location-filter {
             display: flex;
             gap: 1rem;
@@ -73,6 +84,7 @@
             margin-bottom: 2rem;
             flex-wrap: wrap;
         }
+
         .filter-btn {
             padding: 10px 20px;
             background: var(--subtle);
@@ -81,11 +93,13 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
+
         .filter-btn.active {
             background: var(--secondary);
             color: var(--text);
             border-color: var(--secondary);
         }
+
         .airport-section {
             background: var(--subtle);
             padding: 3rem 2rem;
@@ -93,6 +107,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- NAVBAR -->
     <nav class="navbar">
@@ -113,7 +128,8 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-icons">
-                <a href="dashboard.html" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.9rem;">Dashboard</a>
+                <a href="dashboard.html" class="btn btn-secondary"
+                    style="padding: 10px 20px; font-size: 0.9rem;">Dashboard</a>
                 <a href="login.html" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.9rem;">Login</a>
                 <a href="register.html" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Register</a>
             </div>
@@ -133,7 +149,8 @@
     <section class="section">
         <div class="map-container">
             <div style="text-align: center;">
-                <i class="fas fa-map-marked-alt" style="font-size: 4rem; margin-bottom: 1rem; color: var(--secondary);"></i>
+                <i class="fas fa-map-marked-alt"
+                    style="font-size: 4rem; margin-bottom: 1rem; color: var(--secondary);"></i>
                 <p style="font-size: 1.2rem;">Interactive Map</p>
                 <p style="color: var(--accent); margin-top: 0.5rem;">Click on markers to view location details</p>
             </div>
@@ -159,7 +176,8 @@
                     </div>
                     <span class="car-card-category">City</span>
                 </div>
-                <div style="width: 100%; height: 200px; background: var(--extra); margin: 1rem 0; display: flex; align-items: center; justify-content: center;">
+                <div
+                    style="width: 100%; height: 200px; background: var(--extra); margin: 1rem 0; display: flex; align-items: center; justify-content: center;">
                     <i class="fas fa-building" style="font-size: 3rem; color: var(--accent);"></i>
                 </div>
                 <div class="location-info">
@@ -191,7 +209,8 @@
                     </div>
                     <span class="car-card-category">Airport</span>
                 </div>
-                <div style="width: 100%; height: 200px; background: var(--extra); margin: 1rem 0; display: flex; align-items: center; justify-content: center;">
+                <div
+                    style="width: 100%; height: 200px; background: var(--extra); margin: 1rem 0; display: flex; align-items: center; justify-content: center;">
                     <i class="fas fa-plane" style="font-size: 3rem; color: var(--accent);"></i>
                 </div>
                 <div class="location-info">
@@ -223,7 +242,8 @@
                     </div>
                     <span class="car-card-category">City</span>
                 </div>
-                <div style="width: 100%; height: 200px; background: var(--extra); margin: 1rem 0; display: flex; align-items: center; justify-content: center;">
+                <div
+                    style="width: 100%; height: 200px; background: var(--extra); margin: 1rem 0; display: flex; align-items: center; justify-content: center;">
                     <i class="fas fa-train" style="font-size: 3rem; color: var(--accent);"></i>
                 </div>
                 <div class="location-info">
@@ -255,7 +275,8 @@
                     </div>
                     <span class="car-card-category">Downtown</span>
                 </div>
-                <div style="width: 100%; height: 200px; background: var(--extra); margin: 1rem 0; display: flex; align-items: center; justify-content: center;">
+                <div
+                    style="width: 100%; height: 200px; background: var(--extra); margin: 1rem 0; display: flex; align-items: center; justify-content: center;">
                     <i class="fas fa-briefcase" style="font-size: 3rem; color: var(--accent);"></i>
                 </div>
                 <div class="location-info">
@@ -289,21 +310,26 @@
             </div>
             <div class="grid grid-2">
                 <div class="card">
-                    <h3><i class="fas fa-info-circle" style="color: var(--secondary); margin-right: 0.5rem;"></i>Pickup Process</h3>
+                    <h3><i class="fas fa-info-circle" style="color: var(--secondary); margin-right: 0.5rem;"></i>Pickup
+                        Process</h3>
                     <ol style="padding-left: 1.5rem; color: var(--accent);">
-                        <li style="margin-bottom: 0.8rem;">After collecting your luggage, proceed to the arrivals area</li>
+                        <li style="margin-bottom: 0.8rem;">After collecting your luggage, proceed to the arrivals area
+                        </li>
                         <li style="margin-bottom: 0.8rem;">Call our airport location: +1 (555) 123-4568</li>
-                        <li style="margin-bottom: 0.8rem;">Our representative will meet you at the designated pickup point</li>
+                        <li style="margin-bottom: 0.8rem;">Our representative will meet you at the designated pickup
+                            point</li>
                         <li style="margin-bottom: 0.8rem;">Complete the rental agreement and vehicle inspection</li>
                         <li style="margin-bottom: 0.8rem;">You're ready to hit the road!</li>
                     </ol>
                 </div>
                 <div class="card">
-                    <h3><i class="fas fa-map-marked-alt" style="color: var(--secondary); margin-right: 0.5rem;"></i>Terminal Information</h3>
+                    <h3><i class="fas fa-map-marked-alt"
+                            style="color: var(--secondary); margin-right: 0.5rem;"></i>Terminal Information</h3>
                     <p><strong>Terminal 1:</strong> Gate A12 - Main pickup point</p>
                     <p><strong>Terminal 2:</strong> Gate B5 - Secondary pickup point</p>
                     <p><strong>Terminal 3:</strong> Gate C8 - Available on request</p>
-                    <p style="margin-top: 1rem; color: var(--accent);">Our vehicles are clearly marked with VELOCITY BLACK branding. Look for our red and chrome signage.</p>
+                    <p style="margin-top: 1rem; color: var(--accent);">Our vehicles are clearly marked with VELOCITY
+                        BLACK branding. Look for our red and chrome signage.</p>
                 </div>
             </div>
         </div>
@@ -313,8 +339,9 @@
     <footer class="footer carbon-fiber">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>VELOCITY BLACK</h3>
-                <p>Premium car rental service for your every journey. Experience luxury, reliability, and exceptional service.</p>
+                <a href="index.html" class="logo">VELOCITY BLACK</a>
+                <p>Premium car rental service for your every journey. Experience luxury, reliability, and exceptional
+                    service.</p>
                 <div class="footer-social">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -355,7 +382,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 VELOCITY BLACK. All rights reserved. | <a href="#" style="color: var(--accent);">Privacy Policy</a> | <a href="#" style="color: var(--accent);">Terms of Service</a></p>
+            <p>&copy; 2025 VELOCITY BLACK. All rights reserved. | <a href="#" style="color: var(--accent);">Privacy
+                    Policy</a> | <a href="#" style="color: var(--accent);">Terms of Service</a></p>
         </div>
     </footer>
 
@@ -365,7 +393,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
-
-
-
